@@ -22,7 +22,8 @@ const Register = () => {
 
     try {
       await axios.post(
-        "http://localhost:8800/api/auth/register",
+       "https://social-api-jbax.onrender.com/api/auth/register",
+        // "http://localhost:8800/api/auth/register",
         inputs,
         "User has been created"
       );
