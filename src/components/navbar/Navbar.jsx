@@ -1,48 +1,49 @@
-import "./navbar.scss";
-import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
-import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
-import GridViewOutlinedIcon from "@mui/icons-material/GridViewOutlined";
-import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
-import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
-import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
-import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+import "./navBar.scss";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { DarkModeContext } from "../../context/darkModeContext";
 import { AuthContext } from "../../context/authContext";
+import {
+  DarkModeOutlined,
+  EmailOutlined,
+  GridViewOutlined,
+  HomeOutlined,
+  NotificationsOutlined,
+  PersonOutlineOutlined,
+  SearchOutlined,
+  WbSunnyOutlined,
+} from "@mui/icons-material";
 
-const Navbar = () => {
+const NavBar = () => {
   const { toggle, darkMode } = useContext(DarkModeContext);
+
   const { currentUser } = useContext(AuthContext);
 
   return (
-    <div className="navbar">
+    <div className="navBar">
       <div className="left">
         <Link to="/" style={{ textDecoration: "none" }}>
-          <span>lamasocial</span>
+          <span>FaceBook</span>
         </Link>
-        <HomeOutlinedIcon />
+        <HomeOutlined />
         {darkMode ? (
-          <WbSunnyOutlinedIcon onClick={toggle} />
+          <WbSunnyOutlined onClick={toggle} style={{ cursor: "pointer" }} />
         ) : (
-          <DarkModeOutlinedIcon onClick={toggle} />
+          <DarkModeOutlined onClick={toggle} style={{ cursor: "pointer" }} />
         )}
-        <GridViewOutlinedIcon />
+
+        <GridViewOutlined />
         <div className="search">
-          <SearchOutlinedIcon />
-          <input type="text" placeholder="Search..." />
+          <SearchOutlined />
+          <input type="text" placeholder="Search FaceBook..." />
         </div>
       </div>
       <div className="right">
-        <PersonOutlinedIcon />
-        <EmailOutlinedIcon />
-        <NotificationsOutlinedIcon />
+        <PersonOutlineOutlined />
+        <EmailOutlined />
+        <NotificationsOutlined />
         <div className="user">
-          <img
-            src={currentUser.profilePic}
-            alt=""
-          />
+          <img src={"/upload/" + currentUser.profilePic} alt="" />
           <span>{currentUser.name}</span>
         </div>
       </div>
@@ -50,4 +51,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;

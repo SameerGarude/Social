@@ -2,9 +2,10 @@
 
 .post {
   @include themify($themes) {
-    -webkit-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
-    -moz-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
-    box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+    -webkit-box-shadow: 0px 0px 25px -1px rgba(0, 0, 0, 0.38);
+    -moz-box-shadow: 0px 0px 25px -1px rgba(0, 0, 0, 0.38);
+    box-shadow: 0px 0px 25px -1px rgba(0, 0, 0, 0.38);
+
     border-radius: 20px;
     background-color: themed("bg");
     color: themed("textColor");
@@ -16,6 +17,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: relative;
 
         .userInfo {
           display: flex;
@@ -27,7 +29,6 @@
             border-radius: 50%;
             object-fit: cover;
           }
-
           .details {
             display: flex;
             flex-direction: column;
@@ -35,11 +36,21 @@
             .name {
               font-weight: 500;
             }
-
             .date {
               font-size: 12px;
             }
           }
+        }
+
+        button {
+          position: absolute;
+          top: 30px;
+          right: 0;
+          border: none;
+          background-color: #f0544f;
+          padding: 5px;
+          cursor: pointer;
+          color: white;
         }
       }
 
@@ -50,7 +61,7 @@
           width: 100%;
           max-height: 500px;
           object-fit: cover;
-          margin-top: 20px;
+          margin-top: 10px;
         }
       }
 

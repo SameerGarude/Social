@@ -10,14 +10,13 @@
     background-color: themed("bg");
     color: themed("textColor");
 
-    @include mobile{
+    @include mobile {
       display: none;
     }
 
     &::-webkit-scrollbar {
       display: none;
     }
-
     .container {
       padding: 20px;
 
@@ -31,7 +30,7 @@
       .menu {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 8px;
 
         span {
           font-size: 12px;
@@ -48,21 +47,20 @@
             border-radius: 50%;
             object-fit: cover;
           }
-
           span {
-            font-size: 14px;
+            font-size: 16px;
           }
         }
-
         .item {
           display: flex;
           align-items: center;
           gap: 10px;
 
           img {
+            height: 30px;
             width: 30px;
+            object-fit: cover;
           }
-
           span {
             font-size: 14px;
           }

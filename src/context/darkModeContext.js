@@ -21,3 +21,7 @@ export const DarkModeContextProvider = ({ children }) => {
     </DarkModeContext.Provider>
   );
 };
+
+//DarkModeContextProvider is needed to "use DarkModeContext".
+
+// DarkModeContext is needed to use darkMode and toggle
