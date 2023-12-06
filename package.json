@@ -1,5 +1,6 @@
 {
   "name": "social",
+  "homepage":"https://main--golden-cajeta-7fe1f7.netlify.app/",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
