@@ -35,7 +35,7 @@ const NavBar = () => {
         <GridViewOutlined />
         <div className="search">
           <SearchOutlined />
-          <input type="text" placeholder="Search FaceBook.." />
+          <input type="text" placeholder="Search FaceBook..." />
         </div>
       </div>
       <div className="right">
@@ -52,3 +52,4 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
