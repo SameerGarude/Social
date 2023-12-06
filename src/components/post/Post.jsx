@@ -28,8 +28,6 @@ const Post = ({ post }) => {
       }),
   });
 
-  console.log(error);
-
   const queryClient = useQueryClient();
 
   const mutation = useMutation({
@@ -90,7 +88,9 @@ const Post = ({ post }) => {
         </div>
         <div className="info">
           <div className="item">
-            {isLoading ? (
+            {error ? (
+              "likes error"
+            ) : isLoading ? (
               "loading likes"
             ) : data.includes(currentUser.id) ? (
               <FavoriteOutlined style={{ color: "red" }} onClick={handleLike} />

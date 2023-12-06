@@ -10,8 +10,8 @@ export const AuthContextProvider = ({ children }) => {
 
   const login = async inputs => {
     const res = await axios.post(
-      // "http://localhost:8800/api/auth/login",
-      "https://social-api-jbax.onrender.com/api/auth/login",
+      "http://localhost:8800/api/auth/login",
+      // "https://social-api-jbax.onrender.com/api/auth/login",
       inputs,
       {
         withCredentials: true,
