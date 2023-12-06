@@ -90,3 +90,4 @@ export default App;
 
 // cd PROJECTS\React-Projects\social\client
 // outlet is used for swith between home and profile page ok
+
